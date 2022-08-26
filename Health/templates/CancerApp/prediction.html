@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="font-size: 10px;">
+
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+        <a class="navbar-brand" style="margin: 0;" href="{% url 'index-page' %}" >Breast Cancer</a>
+        <form class="form-inline"></form>
+      </nav> 
+
+
+<!-- <div class="container">  -->
+    <div class="row ml-4 "> 
+         <div class="col-md-8 offset-md-2 mt-5 boder"> 
+            <table class="table">
+                <thead>
+                  <tr>
+                   
+                    
+                    <th scope="col">mean_radius</th>
+                    <th scope="col">mean_texture</th>
+                    <th scope="col">mean_perimeter</th>
+                    <th scope="col">mean_area</th>
+                    <th scope="col">mean_smoothness</th>
+                    <th scope="col">mean_compactness</th>
+                    <th scope="col">mean_concavity</th>
+                    <th scope="col">mean_concave_points</th>
+                    <th scope="col">mean_symmetry</th>
+                    <th scope="col">mean_fractal_dimension</th>
+                    <th scope="col">radius_error</th>
+                    <th scope="col">texture_error</th>
+                    <th scope="col">perimeter_error</th>
+                    <th scope="col">area_error</th>
+                    <th scope="col">smoothness_error</th>
+                    <th scope="col">compactness_error</th>
+                    <th scope="col">concavity_error</th>
+                    <th scope="col">concave_points_error</th>
+                    <th scope="col">symmetry_error</th>
+                    <th scope="col">fractal_dimension_error</th>
+                    <th scope="col">worst_radius</th>
+                    <th scope="col">worst_texture</th>
+                    <th scope="col">worst_perimeter</th>
+                    <th scope="col">worst_area</th>
+                    <th scope="col">worst_smoothness</th>
+                    <th scope="col">worst_compactness</th>
+                    <th scope="col">worst_concavity</th>
+                    <th scope="col">worst_concave_points</th>
+                    <th scope="col">worst_symmetry</th>
+                    <th scope="col">worst_fractal_dimension</th>
+                    <th scope="col">prediction</th>
+
+
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for data in prediction_data %}
+                  <tr>
+                    
+                    <th scope="row">{{ data.mean_radius }}</th>
+                    <th>{{ data.mean_texture }}</th>
+                    <th>{{ data.mean_perimeter}}</th>
+                    <th>{{ data.mean_area }}</th>
+                    <th>{{ data.mean_smoothness }}</th>
+                    <th>{{ data.mean_compactness }}</th>
+                    <th>{{ data.mean_concavity }}</th>
+                    <th>{{ data.mean_concave_points }}</th>
+                    <th>{{ data.mean_symmetry }}</th>
+                    <th>{{ data.mean_fractal_dimension }}</th>
+                    <th>{{ data.radius_error }}</th>
+                    <th>{{ data.texture_error }}</th>
+                    <th>{{ data.perimeter_error }}</th>
+                    <th>{{ data.area_error }}</th>
+                    <th>{{ data.smoothness_error }}</th>
+                    <th>{{ data.compactness_error }}</th>
+                    <th>{{ data.concavity_error }}</th>
+                    <th>{{ data.concave_points_error }}</th>
+                    <th>{{ data.symmetry_error}}</th>
+                    <th>{{ data.fractal_dimension_error}}</th>
+                    <th>{{ data.worst_radius}}</th>
+                    <th>{{ data.worst_texture}}</th>
+                    <th>{{ data.worst_perimeter}}</th>
+                    <th>{{ data.worst_area}}</th>
+                    <th>{{ data.worst_smoothness}}</th>
+                    <th>{{ data.worst_compactness}}</th>
+                    <th>{{ data.worst_concavity}}</th>
+                    <th>{{ data.worst_concave_points}}</th>
+                    <th>{{ data.worst_symmetry}}</th>
+                    <th>{{ data.worst_fractal_dimension}}</th>
+                    <th>{{ data.prediction }}</th>
+
+
+
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
